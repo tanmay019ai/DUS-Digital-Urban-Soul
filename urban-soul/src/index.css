@@ -1,0 +1,46 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightning-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* Makes lightning subtle */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.typing-text {
+  z-index: 1;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 80%;
+  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
